@@ -1,0 +1,11 @@
+version: '3.8'
+services: 
+  apiapp:
+    container_name: apiapp
+    image: blackslope/api-app
+    build: 
+      context: .
+    ports: 
+      - "5010:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "docker"
